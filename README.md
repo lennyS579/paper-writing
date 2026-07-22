@@ -1,6 +1,14 @@
-# 证据优先的科学论文写作
+# Evidence-First Paper Writing
 
-一个面向 Codex 的科研写作总控 Skill。它根据研究阶段、已有材料和风险状态，安排下一步任务，并把研究问题、证据、文献、写作、翻译、预审和返修接成一条可追溯的流程。
+> An evidence-first workflow for scientific paper writing.
+
+这是一个面向中文母语科研作者的 Codex 科研写作总控 Skill。它根据研究阶段、已有材料和风险状态，安排下一步任务，并把研究问题、证据、文献、写作、翻译、预审和返修接成一条可追溯的流程。
+
+| 项目 | 名称 |
+|---|---|
+| GitHub 仓库 | `paper-writing` |
+| Skill 名称 | `evidence-first-paper-writing` |
+| 中文定位 | 证据优先的科学论文写作工作流 |
 
 它不是论文生成器，而是科研写作流程的状态机和质量门禁。
 
