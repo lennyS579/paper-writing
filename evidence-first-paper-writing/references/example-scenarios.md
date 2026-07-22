@@ -1,39 +1,39 @@
-# 匿名示例场景
+# Fictional test scenarios
 
-使用以下虚构案例检查 Skill 是否正确路由、是否保持证据边界。不要用真实论文、未发表数据或审稿材料作为公开示例。
+Use these invented cases to check routing and evidence boundaries. Do not replace them with real manuscripts, data, reviewer correspondence, or identifying material.
 
-## 场景一：只有研究方向
+## Scenario 1: Only a broad topic
 
-**输入**：
+**Input:**
 
-> 我想研究轻量级目标检测在低算力设备上的部署，但还没有题目、数据和实验结果。请帮我写论文。
+> In a fictional town, I want to study whether the shade from public trees is associated with differences in daytime pavement temperature. I have no title, cleaned data, or results. Please write a paper.
 
-**预期处理**：
+**Expected handling:**
 
-- 先调用 `academic-research-suite` 或 `researchwrite` 收敛研究问题和研究范围。
-- 输出候选研究问题、所需数据、基线、指标和实验计划。
-- 不输出完整摘要、结果段落或“优于现有方法”等结论。
+- Route to research-question and design preparation.
+- Request operational definitions, data-collection rules, comparison groups, covariates, and evaluation plan.
+- Do not output a completed abstract, results paragraph, effect estimate, or causal conclusion.
 
-## 场景二：有文献和方法，没有结果
+## Scenario 2: Sources and method, but no results
 
-**输入**：
+**Input:**
 
-> 我有 12 篇参考文献、一个模型结构说明和数据集划分方案，但实验还没有跑完。请写方法和结果部分。
+> I have a fictional set of background articles, a draft sampling protocol, and a proposed analysis plan. Data collection is incomplete. Please write the methods and results sections.
 
-**预期处理**：
+**Expected handling:**
 
-- 调用 `nature-academic-search`、`nature-reader` 或 `nature-citation` 核验文献，并用 `researchwrite` 建立主张账本。
-- 可以起草方法章节、结果表格框架和结果报告要求。
-- 所有性能数字、比较结论和显著性表述必须标为 `AUTHOR_INPUT_NEEDED`，不能编写结果段落。
+- Verify the supplied sources before making literature claims and create a claim ledger.
+- Draft a methods section only to the extent confirmed by the protocol; provide a results-table schema and reporting requirements.
+- Mark all effect estimates, comparisons, and significance statements as `AUTHOR_INPUT_NEEDED` rather than inventing results.
 
-## 场景三：有完整草稿，需要英文投稿版
+## Scenario 3: Confirmed draft needs publication checks
 
-**输入**：
+**Input:**
 
-> 这是一篇已确认实验结果的中文草稿。请翻译成英文，检查引文、图表和数据可用性声明，再模拟投稿前审稿。
+> This fictional manuscript has confirmed results. Translate it into English, check citations, figures, and a data-availability statement, then simulate pre-submission review.
 
-**预期处理**：
+**Expected handling:**
 
-- 调用 `nature-polishing` 完成英文论文表达，必要时用 `nature-reader` 保留中英对应关系。
-- 调用 `nature-citation`、`nature-data` 和 `nature-figure` 完成引用、数据和图表检查。
-- 调用 `nature-reviewer` 输出投稿前问题；确认无科学问题后才可调用 `humanizer` 清理模板化表达。
+- Preserve numbers, uncertainty, citation links, figure references, and claim strength during translation.
+- Run citation, figure, disclosure, and pre-submission checks before any language-only cleanup.
+- Report unresolved evidence as open items; do not fabricate approval, repository, or reviewer information.
